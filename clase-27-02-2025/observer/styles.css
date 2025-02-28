@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+button{
+    height: 50px;
+    width: 75px;
+    background-color: black;
+    font-size:20px;
+    color: white;
+    border: none;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: inline- block;
+    margin-top: 10px;
+}
