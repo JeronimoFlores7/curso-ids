@@ -1,38 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags</title>
-    <style>
-
-    </style>
+    <meta name="description" content="Un ejemplo de documento HTML con varias etiquetas comunes.">
+    <title>Ejemplo de Documento HTML</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- seccionamiento del contenido -->
-     <div>
-        <h1>
-            Tags de HTML
-        </h1>
-     </div>
-    <div>
-        <h2>Articulos</h2>
-        <article>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam molestias nisi error deserunt, tenetur aperiam. Eveniet, illo adipisci accusantium inventore voluptas, eaque, officia beatae ea sit ratione quaerat dolorem aperiam!</p>
-        </article>
-        <address>
-            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis expedita dolores temporibus possimus. Maxime optio in doloremque dignissimos deleniti tempore consequuntur quas! Sunt animi quibusdam natus enim iusto voluptates excepturi!</span>
-        </address>
-    </div>
-    <div>
-        <h2></h2>
-    </div>
+    <header>
+        <h1>Bienvenido a mi página web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Este es un párrafo de ejemplo en la sección de inicio.</p>
+            <article>
+                <h3>Artículo destacado</h3>
+                <p>Este es un artículo destacado dentro de la sección de inicio.</p>
+            </article>
+        </section>
+
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Aquí puedes escribir información sobre tu empresa o ti mismo.</p>
+            <aside>
+                <h4>Curiosidad</h4>
+                <p>Este es un contenido adicional relacionado con la sección "Sobre Nosotros".</p>
+            </aside>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <p>Descripción de los servicios que ofreces.</p>
+            <ul>
+                <li>Servicio 1</li>
+                <li>Servicio 2</li>
+                <li>Servicio 3</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="/enviar" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae alias maiores maxime ut ullam commodi minima ipsam eius praesentium perspiciatis illum atque ipsa, veritatis aliquam omnis voluptatum esse nihil incidunt!</p>
+        <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
     </footer>
 </body>
-
 </html>
