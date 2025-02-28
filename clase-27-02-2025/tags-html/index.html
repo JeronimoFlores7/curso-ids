@@ -1,56 +1,149 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un ejemplo de documento HTML con varias etiquetas comunes.">
-    <title>Ejemplo de Documento HTML</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+    <title>Document</title>
 </head>
+
 <body>
     <header>
-        <h1>Bienvenido a mi página web</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+        <h1>TAGS HTML</h1> <!--Título principal -->
+
+        <nav> <!--Enlaces de navegación-->
+            <ul> <!--Lista no ordenada -->
+                <li><a href="#">Inicio</a></li> <!--Etiqueta de lista y Etiqueta de hipertexto-->
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <main> <!--Contenido principal-->
+        <section> <!--Sección de página-->
+            <h2>¿Quienes somos?</h2>
+            <p><b><big>Lorem ipsum dolor <big>sit amet consectetur adipisicing elit. <big>Aut, quas? Possimus accusamus
+                                non quibusdam ab
+                                voluptates sit nesciunt, cupiditate minima </big></big></big> esse neque repudiandae vel
+                    delectus blanditiis,
+                    facilis in quas?</b></p> <!--Párrafo, letra negrita y texto cada vez más grande-->
+        </section>
 
-    <main>
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Este es un párrafo de ejemplo en la sección de inicio.</p>
+        <section>
+            <h2>Frase del día</h2>
+            <p><cite>Sócrates</cite> dijo: "El secreto del cambio es enfocar toda tu energía, no en luchar contra lo
+                viejo, sino en
+                construir lo nuevo"</p>
+        </section>
+
+        <section>
+            <h2>Nuevos blogs</h2>
             <article>
-                <h3>Artículo destacado</h3>
-                <p>Este es un artículo destacado dentro de la sección de inicio.</p>
+                <h3><a href="#">Blog 1</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, iste.</p>
+            </article>
+
+            <article>
+                <h3><a href="#">Blog 2</a></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, iste.</p>
             </article>
         </section>
 
-        <section id="sobre-nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Aquí puedes escribir información sobre tu empresa o ti mismo.</p>
-            <aside>
-                <h4>Curiosidad</h4>
-                <p>Este es un contenido adicional relacionado con la sección "Sobre Nosotros".</p>
-            </aside>
+        <section>
+            <h2>Contenido multimedia</h2>
+            <section>
+                <h3>Imagen Destacada</h3>
+                <div >
+                    <figure>
+                        <img src="paisaje.jpg" alt="Paisaje">
+                        <figcaption>Foto tomada por Jeronimo</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section>
+                <h3>Video Destacado</h3>
+                <video src="video.mp4" controls></video>
+            </section>
+            <section>
+                <h3>Canción Destacada</h3>
+                <audio src="cancion.mp3" controls></audio>
+            </section>
         </section>
 
-        <section id="servicios">
-            <h2>Servicios</h2>
-            <p>Descripción de los servicios que ofreces.</p>
+        <section>
+            <h2>Lista de libros</h2>
+            <p>New Products</p>
             <ul>
-                <li>Servicio 1</li>
-                <li>Servicio 2</li>
-                <li>Servicio 3</li>
+                <li><data value="3967381398">Ready Player One</data></li>
+                <li><data value="3967381399">La larga marcha</data></li>
+                <li><data value="3967381400">IT</data></li>
             </ul>
+            <section>
+                <h3>Comprar un libro</h3>
+                <label>Choose a browser from this list: <input list="libros" name="myBrowser" /></label>
+                <datalist id="libros">
+                    <option value="Ready Player One"></option>
+                    <option value="La larga marcha"></option>
+                    <option value="IT"></option>
+                </datalist>
+            </section>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
+        <section>
+            <h2>Datos curiosos</h2>
+            <p>
+                El acrónimo de moda es:
+                <acronym lang="en" title="Asynchronous JavaScript and XML">Ajax</acronym>.
+            </p>
+            <p>¿Qué significa HTML?
+                <abbr title="Hypertext Markup Language">HTML</abbr>
+            </p>
+
+            <p><dfn>HTML</dfn> Es un lenguajde marcado</p>
+            <p>El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins></p>
+
+            <details>
+                <summary>Datos extra</summary>
+                <p>Dato extra</p>
+            </details>
+
+        </section>
+
+        <section>
+            <h2>Tabla comparativa</h2>
+            <table border="1">
+                <caption>Tabla comparativa</caption>
+                <tr>
+                    <td>1ª Fila, 1ª Columna</td>
+                    <td>1ª Fila, 2ª Columna</td>
+                </tr>
+                <tr>
+                    <td>2ª Filla, 1ª Columna</td>
+                    <td>2ª Filla, 2ª Columna</td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section>
+            <h2>Ejemplo de código</h2>
+            <code>
+                public class HolaMundo { <br />
+                    public static void main(String[] args) { <br />
+                        System.out.println("Hola, mundo"); <br />
+                    } <br />
+                } <br />
+            </code>
+        </section>
+
+        <section>
+            <h2>Comentarios</h2>
             <form action="/enviar" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required><br><br>
@@ -58,19 +151,32 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required><br><br>
 
-                <label for="mensaje">Mensaje:</label><br>
+                <label for="comentario">Comentario:</label><br>
                 <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
 
                 <button type="submit">Enviar</button>
             </form>
-        </section>
+
+            <section>
+                <h2>Colaboradores</h2>
+                <ol>
+                    <li>Jeronimo</li>
+                    <li>Victor</li>
+                    <li>Luis</li>
+                </ol>
+            </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Mi Página Web. Todos los derechos reservados.</p>
+        <p>Mi Página Web. Todos los derechos reservados.</p>
         <address>
-            Contacto: <a href="mailto:info@example.com">info@example.com</a>
+            Contacto: <a href="#">info@example.com</a>
         </address>
+
+        Xonacatlán <br />
+        Estado de México <br />
     </footer>
 </body>
+<script src="index.js"></script>
+
 </html>
