@@ -1,0 +1,70 @@
+body{
+    background-color: black;
+    color:white;
+}
+
+nav{
+    text-align: center;
+    
+}
+
+li{
+    display: inline;
+    padding-inline: 100px;
+}
+
+nav a{
+    padding: 10px;
+    background-color: rgb(26, 26, 26);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+}
+
+nav a:hover{
+    padding: 10px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+}
+
+
+div h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 250px;
+}
+
+.desc-title{
+    text-align: center;
+}
+p{
+    max-width: 1800px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.container-foto-perfil{
+    text-align: center;
+}
+
+img{
+    height: 500px;
+    border-radius: 20px;
+}
+
+footer{
+    text-align: center;
+}
+
+
+/* #foto-perfil{
+    height: 500px;
+    border-radius: 20px;
+}
+
+#img_biblioteca{
+    height: 500px;
+} */
