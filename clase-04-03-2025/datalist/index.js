@@ -1,17 +1,15 @@
-const busqueda = document.querySelector("form");
+// const busqueda = document.querySelector("form");
 
-const prediccion = ["Perro", "Gato", "León", "Jirafa"];
+const formulario = document.querySelector('form');
+const busqueda = document.getElementById("busqueda");
 
+palabra = busqueda.addEventListener("input",()=>{
 
-
-busqueda.addEventListener("input", (event) =>{
-    
 });
 
-function buscar(){
-    const palabra = busqueda.elements['busqueda'].value;
-    if(prediccion.includes(palabra)){
-        console.log("Si coincide");
+formulario.addEventListener("keydown",(event)=>{
+    event.preventDefault();
+    if(palabra === "Fresa"){
+        console.log("Es fresa")
     }
-
-}
+});
