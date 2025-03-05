@@ -1,15 +1,25 @@
-// const busqueda = document.querySelector("form");
+const busqueda = document.querySelector("form");
 
-const formulario = document.querySelector('form');
-const busqueda = document.getElementById("busqueda");
+busqueda.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let palabra = busqueda.elements["busqueda"].value;
 
-palabra = busqueda.addEventListener("input",()=>{
-
-});
-
-formulario.addEventListener("keydown",(event)=>{
-    event.preventDefault();
-    if(palabra === "Fresa"){
-        console.log("Es fresa")
-    }
+  switch (palabra) {
+    case "Helado de chocolate":
+      location.href =
+        "https://www.google.com/search?q=helado+de+chocolate&sca_es";
+      break;
+    case "Helado de coco":
+      location.href =
+        "https://www.google.com/search?q=helado+de+coco&sca_es";
+      break;
+    case "Helado de chicle":
+        location.href="https://www.google.com/search?q=helado+de+chicle&sca_es"
+        break;
+    case "Helado de oreo":
+        location.href="https://www.google.com/search?q=helado+de+oreo&sca_es"
+        break;
+    case "Helado de vainilla":
+        location.href="https://www.google.com/search?q=helado+de+vainilla&sca_es"
+  }
 });
