@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewpor" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" type="image/x-icon">
+    <title>Form-step-by-step</title>
+</head>
+
+<body>
+    <main>
+         <section id="progress">
+                <ol>
+                    <li>
+                        <p>STEP 1</p>
+                        <p>YOUR INFO</p>
+                    </li>
+                    <li>
+                        <p>STEP 2</p>
+                        <p>SELECT PLAN</p>
+                    </li>
+                    <li>
+                        <p>STEP 3</p>
+                        <p>ADD-ONS</p>
+                    </li>
+                    <li>
+                        <p>STEP 4</p>
+                        <p>SUMMARY</p>
+                    </li>
+                </ol>
+        </section>
+        
+            <section id="step-1">
+                <h2>Personal info</h2>
+                <p>Please provide your name, email address, and phone number.</p>
+                <form action="" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" class="personalData" name="name" id="name" placeholder="e.g Stephen King" required />
+                    <label for="email">Email Address</label>
+                    <input type="email" class="personalData" name="email" id="email" placeholder="e.g stephenking@lorem.com" required />
+                    <label for="phone">Phone Number</label>
+                    <input type="number" class="personalData" name="phone" id="phone" placeholder="e.g. +1 234 567 890" required />
+                    <div class="btn-container">
+                        <button id="btn-1" type="submit">Next Step</button>
+                    </div>
+                    
+                </form>
+            </section> 
+
+            <section hidden id="step-2">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
+            <form>
+                <div class="plan-container">
+                    <label class="plans" for="planArcade">
+                        <div>
+                            <img src="/assets/images/icon-arcade.svg" alt="">
+                        </div>
+                        <div class="plan-text">
+                            <p>Arcade</p>
+                            <p>$9/mo</p>
+                        </div>
+                    </label>
+                    <input type="radio" id="planArcade" name="plan" value="arcade" />
+
+                    <label class="plans" for="planAdvanced">
+                        <div>
+                            <img src="/assets/images/icon-advanced.svg" alt="">
+                        </div>
+                        <div class="plan-text">
+                            <p>Advanced</p>
+                            <p>$12/mo</p>
+                        </div>
+                    </label>
+                    <input type="radio" id="planAdvanced" name="plan" value="advanced" />
+                    <label class="plans" for="planPro">
+                        <div>
+                            <img src="/assets/images/icon-pro.svg" alt="">
+                        </div>
+                        <div class="plan-text">
+                            <p>Pro</p>
+                            <p>$15/mo</p>
+                        </div>
+                    </label>
+                    <input type="radio" id="planPro" name="plan" value="pro" />
+
+                </div>
+                <div class="btn-container">
+                    <button id="btn-2" type="submit">Next Step</button>
+                    <button id="btnBack-1" type="button">Go Back</button>
+                </div>
+            </form>
+            </section>
+            
+            <section hidden id="step-3">
+                <h2>Pick add-ons</h2>
+                <p>Add-ons help enhance your gaming experience.</p>
+                <form>
+                    <div class="addOns-container">
+                        <label class="addOn" for="onlineService">
+                            <p>Online service</p>
+                            <input type="checkbox" id="onlineService" name="addOn" value="online" />     
+                        </label>
+                       
+                        <label class="addOn" for="lagerStorage">
+                            <p>Larger storage</p>
+                            <input type="checkbox" id="largerStorage" name="addOn" value="storage" />
+                        </label>
+                       
+                        <label class="addOn" for="planPro">
+                            <p>Customizable Profile</p>
+                            <input type="checkbox" id="planPro" name="plan" value="pro" />
+                        </label>
+                    </div>
+                    <div class="btn-container">
+                        <button id ="btn-3" type="submit">Next Step</button>
+                        <button id="btnBack-2" type="button">Go Back</button>
+                    </div>
+                </form>
+            </section>
+        </div> 
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
