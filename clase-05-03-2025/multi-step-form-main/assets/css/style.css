@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+
+body{
+    height: 100vh;
+    background-color:  hsl(217, 100%, 97%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    height: 650px ;
+    width: 1000px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px hsl(229, 24%, 87%);
+    display: flex;
+}
+
+section{
+    margin: 80px 0 0 80px;
+}
+
+h2{
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2 + p{
+    color: hsl(231, 11%, 63%);
+}
+
+label{
+    color: hsl(213, 96%, 18%);
+    font-weight: 400;
+    display: block;
+    margin:30px 0 0 0;
+}
+
+button{
+    font-size: 18px;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 35px;
+
+}
+
+button:hover{
+    color: hsl(213, 96%, 18%);
+    background-color: white;
+    cursor: pointer;
+}
+
+.btn-container{
+    margin: 150px 0 0 0;
+}
+
+
+
+.personalData{
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    height: 30px;
+    width: 500px;
+
+}
+
+
+#progress{
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: 40px 0 0 20px;
+    background-image: url('../images/bg-sidebar-desktop.svg');
+    background-color: blue;
+    height: 568px;
+    width: 274px;
+    border-radius: 15px;
+}
+
+
+
+li{
+    color:white;
+    padding: 25px 0;
+}
+
+/* Estilos para los planes */
+
+.plan-container{
+    display: flex;
+    margin: 0 0 0 0;
+}
+
+.plans{
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+/* Estilos para los add-ons */
+.addOn{
+    border: 1px solid black;
+}
