@@ -1,0 +1,13 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url();
+    background-color: blue; /* Fallback rules or values */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(red, green, blue, alpha);
+
+}

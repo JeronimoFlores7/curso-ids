@@ -35,10 +35,13 @@ input {
 }
 
 select{
-  text-decoration: none;
   width: 60vh;
   border: none;
   background-color: white;
+}
+
+option{
+background-color: red;;
 }
 
 button {
