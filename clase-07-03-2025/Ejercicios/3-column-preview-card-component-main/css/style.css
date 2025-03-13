@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+main{
+    height: 90%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+section{
+    padding: 10% 10%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:5%
+
+}
+
+
+
+h2{
+    margin-left:5% ;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+
+    color: hsl(0, 0%, 95%);
+}
+
+p{
+   
+    margin-left: 5%;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75)
+}
+
+button{
+    width: 100px;
+    border: none;
+    margin: 3% 15%;
+    border-radius: 15px;
+    padding: 8px 5px;
+    font-family: "Lexend Deca", sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+button:hover{
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+}
+
+.section-1{
+    height: 33.33%;
+    width: 100%;
+    background-color:  hsl(31, 77%, 52%);
+}
+
+.btn-sedan{
+    color:  hsl(31, 77%, 52%);
+}
+
+.btn-sedan:hover{
+    background-color: hsl(31, 77%, 52%);
+
+}
+
+.section-2{
+    height: 33.33%;
+    width: 100%;
+    background-color:  hsl(184, 100%, 22%);
+}
+
+.btn-suv{
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-suv:hover{
+    background-color: hsl(184, 100%, 22%);
+
+}
+
+.section-3{
+    height: 33.33%;
+    width: 100%;
+    background-color: hsl(179, 100%, 13%);
+}
+
+.btn-luxury{
+    color: hsl(179, 100%, 13%);
+}
+
+.btn-luxury:hover{
+    background-color: hsl(179, 100%, 13%);
+
+}
+
+
+
+@media (min-width: 750px) {
+    body{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-content: center;
+    }
+    
+    main{
+        height: 90%;
+        width: 80%;
+        display: flex;
+        border-radius: 10px;
+
+    }
+    
+    section{
+        padding: 10% 0 20% 2%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:5%
+    
+    }
+
+    
+}
+  
+  
