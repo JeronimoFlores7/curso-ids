@@ -16,7 +16,7 @@ botones.forEach((boton) => {
   boton.addEventListener('click', (event) => {
     const valorBoton = event.target.value;
     acumulador += valorBoton;
-    inputResultado.value = acumulador; 
+    inputResultado.value = acumulador;
     //console.log(`Cadena: ${valorCadena}`);
 
     if (valorBoton === '+' || valorBoton === '-' || valorBoton === '*' || valorBoton === '/') {
