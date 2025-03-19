@@ -80,15 +80,41 @@ Promise.all([promise1, promise2, promise3])
 
 //all modificado.
 
+/**
+ * 
+ * @param {Array} arrayPromesas 
+ * @returns {Promise}
+ */
 Promise.prototype.all = function(arrayPromesas){
-    let resultados = [];
-    for(let i = 0; i < arrayPromesas.length; i++){
-        arrayPromesas[i].then(()=>{
-            resultados.push(true);
-        })
-    }
-    return resultados.includes (true);
+    return new Promise((resolve, reject) =>{
+      let resultados = []; 
+      let contador = 0;
+      for(let i = 0; i < arrayPromesas.length; i++){
+        arrayPromesas[i].then((data) => {
+          resultados[i] = data;
+          contador++;
+          if(contador === arrayPromesas.length){
+            resolve(resultados);
+          }
+        }).catch((error) => {
+          reject(error);
+        });
+      }
+    });
 }
+
+const promis1 = Promise.resolve(1);
+const promis2 = Promise.resolve("Error en promesa2");
+const promis3 = Promise.resolve(3);
+
+Promise.all([promis1, promis2, promis3])
+    .then((resultados) => {
+        console.log(resultados); // No se ejecuta
+    })
+    .catch((error) => {
+        console.error(error); // "Error en promesa2"
+    });
+
 
 //allSelected --> Devuelve un array con el estado y resultado de cada promesa
 function fetchData(id, success, delay) {
