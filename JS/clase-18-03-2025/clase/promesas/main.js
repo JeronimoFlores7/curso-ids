@@ -109,7 +109,7 @@ const promis3 = Promise.resolve(3);
 
 Promise.all([promis1, promis2, promis3])
     .then((resultados) => {
-        console.log(resultados); // No se ejecuta
+        console.log(resultados ); // No se ejecuta
     })
     .catch((error) => {
         console.error(error); // "Error en promesa2"

@@ -4,10 +4,10 @@ let arreglo1 = [6,7,8,9,,10];
 let arreglo2 = ['a','b','c','d'];
 let arreglo3 = ["spray", "elite", "exuberant", "destruction", "present"];
 
-//at -->
+//at --> Devuelve el elemento en la posición indicada
 console.log(arreglo.at(-1));
 
-//concat --> 
+//concat --> Se usa para unir uno o varios arrays
 console.log(arreglo.concat(arreglo1));
 
 //copyWithin --> 
