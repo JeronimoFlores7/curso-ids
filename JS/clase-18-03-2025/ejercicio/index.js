@@ -49,7 +49,7 @@ console.log(arreglo.findLastIndex((x) => x< 5));
 
 //flat --> Devuelve un nuevo array con todos los elementos de este array concatenados recursivamente hasta la profundidad especificada.
 const arreglo4 = [1, 2, [3, 4, [5, 6]]];
-console.log(arreglo4.flat(2));
+arreglo4.flat(2);
 
 //flatMap --> Devuelve un nuevo array con todos los elementos de este array concatenados recursivamente hasta la profundidad especificada.
 const arreglo5 = [1, 2, [3, 4, [5, 6]]];

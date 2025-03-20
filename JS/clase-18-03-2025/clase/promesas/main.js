@@ -79,11 +79,10 @@ Promise.all([promise1, promise2, promise3])
   });
 
 //all modificado.
-
 /**
  * 
  * @param {Array} arrayPromesas 
- * @returns {Promise}
+ * @returns 
  */
 Promise.prototype.all = function(arrayPromesas){
     return new Promise((resolve, reject) =>{
@@ -93,15 +92,8 @@ Promise.prototype.all = function(arrayPromesas){
         arrayPromesas[i].then((data) => {
           resultados[i] = data;
           contador++;
-          if(contador === arrayPromesas.length){
-            resolve(resultados);
-          }
-        }).catch((error) => {
-          reject(error);
-        });
-      }
-    });
-}
+        })
+}})}
 
 const promis1 = Promise.resolve(1);
 const promis2 = Promise.resolve("Error en promesa2");
