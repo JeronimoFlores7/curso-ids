@@ -19,23 +19,7 @@ promesa
     console.log(error);
   });
 
-const obtenerInfoPokemon = () => {
-  const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-  fetch(url)
-    .then((response) => {
-      console.log(response);
-      return response.json();
-    })
-    .then((data) => {
-      console.log(
-        `Aquí obtuve la información ditto: ${data.sprites.front_default}`
-      );
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
-obtenerInfoPokemon();
+
 
 //Métodos de instancia
 //then -->  Retorna una Promesa. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de Promise
@@ -53,8 +37,6 @@ function fetchData(success) {
     }, 2000); // Simula un retraso de 2 segundos
   });
 }
-
-
 
 //Métodos estáticos
 //all --> Devuelve una promesa correcta solamente si todas las promesas iterables terminan con éxito, si una falla el resultado será rechazado
@@ -80,33 +62,21 @@ Promise.all([promise1, promise2, promise3])
 
 //all modificado.
 /**
- * 
- * @param {Array} arrayPromesas 
- * @returns 
+ *
+ * @param {Array} arrayPromesas
+ * @returns
  */
-Promise.prototype.all = function(arrayPromesas){
-    return new Promise((resolve, reject) =>{
-      let resultados = []; 
-      let contador = 0;
-      for(let i = 0; i < arrayPromesas.length; i++){
-        arrayPromesas[i].then((data) => {
-          resultados[i] = data;
-          contador++;
-        })
-}})}
-
-const promis1 = Promise.resolve(1);
-const promis2 = Promise.resolve("Error en promesa2");
-const promis3 = Promise.resolve(3);
-
-Promise.all([promis1, promis2, promis3])
-    .then((resultados) => {
-        console.log(resultados ); // No se ejecuta
-    })
-    .catch((error) => {
-        console.error(error); // "Error en promesa2"
-    });
-
+Promise.prototype.all = function (arrayPromesas) {
+    let resultados = [];
+    let contador = 0;
+    for (let i = 0; i < arrayPromesas.length; i++) {
+      arrayPromesas[i].then((data) => {
+        resultados[i] = data;
+        contador++;
+      });
+    }
+  
+};
 
 //allSelected --> Devuelve un array con el estado y resultado de cada promesa
 function fetchData(id, success, delay) {
@@ -222,3 +192,18 @@ promise
   .catch((error) => {
     console.log(error); // Imprime: "Error"
   });
+
+
+ 
+ /*    const iterable = [fetch('"https://pokeapi.co/api/v2/pokemon/ditto'), fetch('"https://pokeapi.co/api/v2/pokemon/pikachu'), fetch('"https://pokeapi.co/api/v2/pokemon/meow') ];
+    Promise.all(iterable)
+    .then((response) => {
+      console.log('Se reslvieron todas las promesas', response);
+      return response.map((pokemonInfo) =>{
+        return pokemonInfo.json();
+
+      });
+    })
+    .catch =>(error => */
+
+    
