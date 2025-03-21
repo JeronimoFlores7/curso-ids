@@ -1,4 +1,4 @@
-import {LitElement, css,html} from "https://cdn.jsdelivr.net/npm/lit@3.2.1/+esm";
+import {LitElement, css, html} from "https://cdn.jsdelivr.net/npm/lit@3.2.1/+esm";
 
 export class ImageCarousel extends LitElement {
   static properties = {
@@ -30,8 +30,7 @@ export class ImageCarousel extends LitElement {
     }
 
     p {
-    font-family: "Gill Sans", sans-serif;
-    
+      font-family: "Gill Sans", sans-serif;
     }
     button {
       background-color: black;
@@ -60,17 +59,32 @@ export class ImageCarousel extends LitElement {
     this.style.setProperty("--img-height", this.height);
     this.style.setProperty("--img-width", this.width);
     this.style.setProperty("--img-radius", this.borderRadius);
+
+    const btnLeft = this.renderRoot.querySelector("#left");
+    const btnRight = this.renderRoot.querySelector("#right");
+
+    if (this.index === 0) {
+      btnLeft.disabled = true;
+    } else {
+      btnLeft.disabled = false;
+    }
+
+    if (this.index === this.images.length - 1) {
+      btnRight.disabled = true;
+    } else {
+      btnRight.disabled = false;
+    }
   }
 
   render() {
-    console.log(this.images);
+    //console.log(this.images);
     return html` <section class="imagen">
         <img src="${this.images[this.index]}" />
       </section>
       <section class="btns">
-        <button @click="${this._leftClick}"><</button>
-        <p>${this.index + 1}/${this.images.length} </p>
-        <button @click="${this._rightClick}">></button>
+        <button id="left" @click="${this._leftClick}"><</button>
+        <p>${this.index + 1}/${this.images.length}</p>
+        <button id="right" @click="${this._rightClick}">></button>
       </section>`;
   }
 
@@ -78,14 +92,12 @@ export class ImageCarousel extends LitElement {
     if (this.index > 0) {
       this.index--;
     }
-    
   }
 
   _rightClick() {
     if (this.index < this.images.length - 1) {
-      console.log("click");
+      //console.log("click");
       this.index++;
-      
     }
   }
 }

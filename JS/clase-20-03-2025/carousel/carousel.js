@@ -9,7 +9,7 @@ export class ImageCarousel extends HTMLElement {
         this.attachShadow({mode: 'open'});
     }
 
-    static observedAttributes = ['images', 'height', 'width', 'border-radius']; //Se agregaron más atributos
+    static observedAttributes = ['images', 'height', 'width', 'border']; //Se agregaron más atributos
 
     connectedCallback() {
         this.render(); // pintar mi componente con todo y shadow DOM
@@ -53,7 +53,7 @@ export class ImageCarousel extends HTMLElement {
         if(name === 'width'){
             this.width = newValue;
         }
-        if(name === 'border-radius'){
+        if(name === 'border'){
             this.radius = newValue;
         }
     }
