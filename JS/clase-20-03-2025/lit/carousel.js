@@ -6,7 +6,7 @@ export class ImageCarousel extends LitElement {
     index: { type: Number },
     height: { type: String },
     width: { type: String },
-    borderRadius: { type: String },
+    borderRadius: { type: String }
   };
 
   constructor() {
@@ -14,7 +14,7 @@ export class ImageCarousel extends LitElement {
     this.index = 0;
     this.images = [];
     this.height = "300px";
-    this.width = "auto";
+    this.width = "500px";
     this.borderRadius = "";
   }
 
@@ -60,24 +60,9 @@ export class ImageCarousel extends LitElement {
     this.style.setProperty("--img-width", this.width);
     this.style.setProperty("--img-radius", this.borderRadius);
 
-    const btnLeft = this.renderRoot.querySelector("#left");
-    const btnRight = this.renderRoot.querySelector("#right");
-
-    if (this.index === 0) {
-      btnLeft.disabled = true;
-    } else {
-      btnLeft.disabled = false;
-    }
-
-    if (this.index === this.images.length - 1) {
-      btnRight.disabled = true;
-    } else {
-      btnRight.disabled = false;
-    }
   }
 
   render() {
-    //console.log(this.images);
     return html` <section class="imagen">
         <img src="${this.images[this.index]}" />
       </section>
@@ -96,7 +81,6 @@ export class ImageCarousel extends LitElement {
 
   _rightClick() {
     if (this.index < this.images.length - 1) {
-      //console.log("click");
       this.index++;
     }
   }

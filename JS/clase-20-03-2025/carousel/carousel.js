@@ -9,7 +9,7 @@ export class ImageCarousel extends HTMLElement {
         this.attachShadow({mode: 'open'});
     }
 
-    static observedAttributes = ['images', 'height', 'width', 'border']; //Se agregaron más atributos
+    static observedAttributes = ['images', 'height', 'width', 'border']; 
 
     connectedCallback() {
         this.render(); // pintar mi componente con todo y shadow DOM
