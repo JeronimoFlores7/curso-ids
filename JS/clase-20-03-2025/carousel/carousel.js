@@ -1,58 +1,15 @@
-export class MyButton extends HTMLElement {
-    constructor() {
-        super(); // mandar llamar al metodo constructor de la clase padre
-        this.color = 'inital';
-        this.attachShadow({mode: 'open'}); // generar un sub arbol del DOM, shadowDOM
-        // const template = document.querySelector('#tpl');
-        // const contenido = template.textContent.cloneNode(true);
-    }
-
-    static observedAttributes = ['color'];
-    
-    // ciclo de vida de un web component
-    connectedCallback() {
-        // cuando el elemento es agregado al DOM
-        console.log('Me agregaron al DOM :D');
-        this.render();
-    }
-
-    disconnectedCallback() {
-        console.log('Me quitaron del DOM D:')
-    }
-
-    attributeChangedCallback(name, oldValue, newValue) {
-        // name = color
-        // oldValue = red
-        // newValue = green
-        if(name === 'images') {
-            this.color = newValue;
-            // const btn = this.shadowRoot.querySelector('button');
-            // btn.style.backgroundColor = newValue;
-        }
-        this.render();
-    }
-
-    render() {
-        this.shadowRoot.innerHTML = `
-            <style>
-                button {
-                    background-color: ${this.color};
-                }
-            </style>
-            <button>CLICK ME</button>
-        `;
-    }
-}
-
 export class ImageCarousel extends HTMLElement {
     constructor() {
         super();
         this.index = 0;
         this.images = [];
+        this.height = '300px';
+        this.width = 'auto';
+        this.radius = '';
         this.attachShadow({mode: 'open'});
     }
 
-    static observedAttributes = ['images'];
+    static observedAttributes = ['images', 'height', 'width', 'border-radius']; //Se agregaron más atributos
 
     connectedCallback() {
         this.render(); // pintar mi componente con todo y shadow DOM
@@ -90,14 +47,28 @@ export class ImageCarousel extends HTMLElement {
         if(name === 'images') {
             this.images = JSON.parse(newValue);
         }
+        if(name === 'height'){
+            this.height = newValue;
+        }
+        if(name === 'width'){
+            this.width = newValue;
+        }
+        if(name === 'border-radius'){
+            this.radius = newValue;
+        }
     }
-
     render() {
+        console.log(this.height);
         this.shadowRoot.innerHTML = `
             <style>
                 img {
-                    height: 100px;
-                    width: auto;
+                    border-radius: ${this.radius};
+                    height: ${this.height};
+                    width: ${this.width};
+                }
+                .imagen{
+                display: flex;
+                justify-content: center;
                 }
                 button  {
                     background-color: black;
@@ -114,15 +85,17 @@ export class ImageCarousel extends HTMLElement {
                     background-color: grey;
                 }
 
-                section {
+                .btn {
                     display: flex;
                     justify-content: center;
                     align-items: center; 
                 }
             </style>
             <br>
+            <section class="imagen">
             <img src="${this.images[this.index]}">
-            <section>
+            </section>
+            <section class="btn">
                 <button id="left">\<</button>
                 <button id="right">\></button>
             </section>
