@@ -77,7 +77,6 @@ for (let e of iterator2) {
 console.log(arreglo3.lastIndexOf('elite'));
 
 //map --> Devuelve un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos
-
 const arreglo6 = [1, 2, 3, 4, 5];
 const dobles = arreglo6.map(x => x * 2);
 console.log(dobles);
