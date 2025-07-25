@@ -13,7 +13,11 @@ export class TmSecondsToTime extends LitElement {
 
   static styles = css`
     :host {
-      display: block;
+        display: block;
+        font-size: 5rem;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 20px;
     }
   `;
 
